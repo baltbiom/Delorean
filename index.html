@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1981 DeLorean DMC-12 For Sale</title>
+  <meta name="description" content="1981 DeLorean DMC-12 for sale. Long-term ownership since 1990, working condition, excellent stainless body, honest enthusiast-owned example." />
+  <style>
+    :root {
+      --bg: #101317;
+      --panel: #181d23;
+      --panel-light: #222a32;
+      --text: #f4f5f7;
+      --muted: #b7c0cc;
+      --line: rgba(255,255,255,0.12);
+      --warning: #f1d18a;
+      --success: #9bd3b0;
+      --max-width: 1180px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+    a { color: inherit; }
+    .hero {
+      min-height: 88vh; display: grid; align-items: end;
+      background: linear-gradient(to bottom, rgba(16,19,23,0.18), rgba(16,19,23,0.96)),
+                  linear-gradient(to right, rgba(16,19,23,0.92), rgba(16,19,23,0.35)),
+                  url('images/08-gullwing-driver-side-open.jpg');
+      background-size: cover; background-position: center; padding: 32px;
+    }
+    .hero-inner { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 72px 0 36px; }
+    .eyebrow { display: inline-block; padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 0.92rem; letter-spacing: 0.08em; text-transform: uppercase; background: rgba(0,0,0,0.22); margin-bottom: 18px; }
+    h1 { font-size: clamp(3rem, 8vw, 7.5rem); line-height: 0.92; margin: 0 0 22px; letter-spacing: -0.06em; max-width: 900px; }
+    .hero-subtitle { max-width: 760px; font-size: clamp(1.15rem, 2vw, 1.55rem); color: var(--muted); margin-bottom: 34px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .button { display: inline-flex; align-items: center; justify-content: center; padding: 14px 20px; border-radius: 999px; text-decoration: none; font-weight: 700; border: 1px solid var(--line); transition: transform 0.18s ease, background 0.18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--text); color: var(--bg); }
+    .button-secondary { background: rgba(255,255,255,0.08); color: var(--text); }
+    main { max-width: var(--max-width); margin: 0 auto; padding: 54px 24px 96px; }
+    section { margin: 0 0 74px; }
+    .section-header { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 28px; align-items: start; margin-bottom: 28px; }
+    h2 { font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1; margin: 0; letter-spacing: -0.045em; }
+    .section-intro { color: var(--muted); font-size: 1.1rem; margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 24px; padding: 22px; min-height: 150px; }
+    .card strong { display: block; font-size: 1.55rem; line-height: 1.1; margin-bottom: 10px; letter-spacing: -0.03em; }
+    .card span { color: var(--muted); }
+    .feature-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 28px; padding: 30px; }
+    .panel h3 { font-size: 1.8rem; margin: 0 0 14px; letter-spacing: -0.03em; }
+    .panel p { color: var(--muted); margin: 0 0 16px; }
+    ul { margin: 0; padding-left: 20px; color: var(--muted); }
+    li { margin: 9px 0; }
+    .status-list { display: grid; gap: 12px; }
+    .status-item { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; padding: 16px; background: var(--panel-light); border-radius: 18px; border: 1px solid var(--line); }
+    .dot { width: 12px; height: 12px; border-radius: 50%; margin-top: 7px; background: var(--success); }
+    .dot.warning { background: var(--warning); }
+    .status-item b { display: block; margin-bottom: 4px; }
+    .status-item span { color: var(--muted); }
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .gallery-item { display: block; min-height: 240px; border-radius: 24px; border: 1px solid var(--line); background: var(--panel); text-decoration: none; overflow: hidden; }
+    .gallery-item img { width: 100%; height: 210px; object-fit: cover; display: block; }
+    .gallery-item span { display: block; padding: 12px 14px 14px; color: var(--muted); font-size: 0.95rem; }
+    .specs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .spec { display: flex; justify-content: space-between; gap: 18px; padding: 15px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .spec b { color: var(--text); text-align: right; }
+    .quote { padding: 44px; border-radius: 32px; background: linear-gradient(135deg, var(--panel), var(--panel-light)); border: 1px solid var(--line); font-size: clamp(1.5rem, 3vw, 2.6rem); line-height: 1.18; letter-spacing: -0.045em; }
+    .video-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
+    .video-link { display: flex; justify-content: center; align-items: center; min-height: 70px; padding: 14px; border-radius: 18px; background: var(--panel-light); border: 1px solid var(--line); text-decoration: none; font-weight: 700; text-align: center; }
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: stretch; }
+    .contact-card { background: var(--text); color: var(--bg); border-radius: 32px; padding: 34px; }
+    .contact-card h2 { color: var(--bg); margin-bottom: 18px; }
+    .contact-card p { color: #3f4852; font-size: 1.08rem; }
+    .contact-card .button { background: var(--bg); color: var(--text); margin-top: 10px; }
+    footer { max-width: var(--max-width); margin: 0 auto; padding: 32px 24px 54px; color: var(--muted); border-top: 1px solid var(--line); font-size: 0.95rem; }
+    @media (max-width: 1000px) {
+      .gallery { grid-template-columns: repeat(3, 1fr); }
+      .video-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .section-header, .feature-grid, .contact { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .specs { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .hero { padding: 22px; }
+      .cards, .gallery, .video-grid { grid-template-columns: 1fr; }
+      .panel, .quote, .contact-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">1981 DeLorean DMC-12 For Sale</div>
+      <h1>An honest, long-term-owned DeLorean.</h1>
+      <p class="hero-subtitle">
+        Offered by its long-term owner since 1990, this 1981 DeLorean DMC-12 is in working condition, has a nearly perfect stainless-steel body, and is being represented clearly and honestly for its next caretaker.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#contact">Inquire About the Car</a>
+        <a class="button button-secondary" href="#condition">View Condition Notes</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section aria-label="Highlights">
+      <div class="cards">
+        <div class="card"><strong>1981</strong><span>DeLorean DMC-12 with iconic stainless body and gullwing doors.</span></div>
+        <div class="card"><strong>Since 1990</strong><span>Long-term ownership with a clear, enthusiast-owned story.</span></div>
+        <div class="card"><strong>2 owners</strong><span>Limited ownership history and known provenance.</span></div>
+        <div class="card"><strong>Working</strong><span>Engine and critical functions are operational.</span></div>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="section-header">
+        <h2>The car</h2>
+        <p class="section-intro">
+          This is the right DeLorean for a buyer who values transparency, history, and a strong starting point. It is not being presented as a concours restoration. It is a real, usable, long-term-owned example with a beautiful body and a short list of known needs.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <div class="panel">
+          <h3>Why this example stands out</h3>
+          <p>
+            Many DeLoreans have passed through multiple hands, long storage periods, or incomplete histories. This car has a more straightforward story: purchased by the current owner in 1990, kept for decades, and now being offered with an honest description of both its strengths and its current needs.
+          </p>
+          <ul>
+            <li>Iconic 1981 DMC-12 design</li>
+            <li>Long-term ownership since 1990</li>
+            <li>Only two owners total</li>
+            <li>Nearly perfect stainless-steel body</li>
+            <li>Engine and critical systems currently working</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Best fit for</h3>
+          <ul>
+            <li>A DeLorean enthusiast looking for an honest driver-quality car</li>
+            <li>A collector who values long-term ownership and provenance</li>
+            <li>A buyer comfortable addressing several smaller mechanical and comfort items</li>
+            <li>Someone who wants a presentable stainless-body example rather than a mystery project</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="section-header">
+        <h2>Photo gallery</h2>
+        <p class="section-intro">
+          The gallery includes exterior, interior, engine bay, underside, gauge, and VIN plate photos. Select any image to open the larger version.
+        </p>
+      </div>
+      <div class="gallery">
+          <a class="gallery-item" href="images/01-odometer-gauge.jpg" target="_blank" rel="noopener">
+            <img src="images/01-odometer-gauge.jpg" alt="Odometer and gauge cluster" loading="lazy">
+            <span>Odometer and gauge cluster</span>
+          </a>
+          <a class="gallery-item" href="images/02-rear-view.jpg" target="_blank" rel="noopener">
+            <img src="images/02-rear-view.jpg" alt="Rear view" loading="lazy">
+            <span>Rear view</span>
+          </a>
+          <a class="gallery-item" href="images/03-side-profile.jpg" target="_blank" rel="noopener">
+            <img src="images/03-side-profile.jpg" alt="Side profile" loading="lazy">
+            <span>Side profile</span>
+          </a>
+          <a class="gallery-item" href="images/04-rear-three-quarter.jpg" target="_blank" rel="noopener">
+            <img src="images/04-rear-three-quarter.jpg" alt="Rear three-quarter view" loading="lazy">
+            <span>Rear three-quarter view</span>
+          </a>
+          <a class="gallery-item" href="images/05-front-three-quarter.jpg" target="_blank" rel="noopener">
+            <img src="images/05-front-three-quarter.jpg" alt="Front three-quarter view" loading="lazy">
+            <span>Front three-quarter view</span>
+          </a>
+          <a class="gallery-item" href="images/06-front-view.jpg" target="_blank" rel="noopener">
+            <img src="images/06-front-view.jpg" alt="Front view" loading="lazy">
+            <span>Front view</span>
+          </a>
+          <a class="gallery-item" href="images/07-front-doors-open.jpg" target="_blank" rel="noopener">
+            <img src="images/07-front-doors-open.jpg" alt="Front view with gullwing doors open" loading="lazy">
+            <span>Front view with gullwing doors open</span>
+          </a>
+          <a class="gallery-item" href="images/08-gullwing-driver-side-open.jpg" target="_blank" rel="noopener">
+            <img src="images/08-gullwing-driver-side-open.jpg" alt="Driver-side gullwing door open" loading="lazy">
+            <span>Driver-side gullwing door open</span>
+          </a>
+          <a class="gallery-item" href="images/09-interior-driver.jpg" target="_blank" rel="noopener">
+            <img src="images/09-interior-driver.jpg" alt="Driver interior" loading="lazy">
+            <span>Driver interior</span>
+          </a>
+          <a class="gallery-item" href="images/10-interior-passenger.jpg" target="_blank" rel="noopener">
+            <img src="images/10-interior-passenger.jpg" alt="Passenger interior" loading="lazy">
+            <span>Passenger interior</span>
+          </a>
+          <a class="gallery-item" href="images/11-engine-bay.jpg" target="_blank" rel="noopener">
+            <img src="images/11-engine-bay.jpg" alt="Engine bay" loading="lazy">
+            <span>Engine bay</span>
+          </a>
+          <a class="gallery-item" href="images/12-gullwing-driveway.jpg" target="_blank" rel="noopener">
+            <img src="images/12-gullwing-driveway.jpg" alt="Gullwing doors open" loading="lazy">
+            <span>Gullwing doors open</span>
+          </a>
+          <a class="gallery-item" href="images/13-gullwing-side.jpg" target="_blank" rel="noopener">
+            <img src="images/13-gullwing-side.jpg" alt="Side view with gullwing doors open" loading="lazy">
+            <span>Side view with gullwing doors open</span>
+          </a>
+          <a class="gallery-item" href="images/14-front-driveway.jpg" target="_blank" rel="noopener">
+            <img src="images/14-front-driveway.jpg" alt="Front view in driveway" loading="lazy">
+            <span>Front view in driveway</span>
+          </a>
+          <a class="gallery-item" href="images/15-front-quarter-driveway.jpg" target="_blank" rel="noopener">
+            <img src="images/15-front-quarter-driveway.jpg" alt="Front quarter view" loading="lazy">
+            <span>Front quarter view</span>
+          </a>
+          <a class="gallery-item" href="images/16-rear-gullwing-quarter.jpg" target="_blank" rel="noopener">
+            <img src="images/16-rear-gullwing-quarter.jpg" alt="Rear quarter with gullwing doors open" loading="lazy">
+            <span>Rear quarter with gullwing doors open</span>
+          </a>
+          <a class="gallery-item" href="images/17-driver-seat.jpg" target="_blank" rel="noopener">
+            <img src="images/17-driver-seat.jpg" alt="Driver seat" loading="lazy">
+            <span>Driver seat</span>
+          </a>
+          <a class="gallery-item" href="images/18-passenger-seat.jpg" target="_blank" rel="noopener">
+            <img src="images/18-passenger-seat.jpg" alt="Passenger seat" loading="lazy">
+            <span>Passenger seat</span>
+          </a>
+          <a class="gallery-item" href="images/19-steering-wheel-gauges.jpg" target="_blank" rel="noopener">
+            <img src="images/19-steering-wheel-gauges.jpg" alt="Steering wheel and gauges" loading="lazy">
+            <span>Steering wheel and gauges</span>
+          </a>
+          <a class="gallery-item" href="images/20-center-console.jpg" target="_blank" rel="noopener">
+            <img src="images/20-center-console.jpg" alt="Center console" loading="lazy">
+            <span>Center console</span>
+          </a>
+          <a class="gallery-item" href="images/21-left-side-driveway.jpg" target="_blank" rel="noopener">
+            <img src="images/21-left-side-driveway.jpg" alt="Left side profile" loading="lazy">
+            <span>Left side profile</span>
+          </a>
+          <a class="gallery-item" href="images/22-rear-driveway.jpg" target="_blank" rel="noopener">
+            <img src="images/22-rear-driveway.jpg" alt="Rear view in driveway" loading="lazy">
+            <span>Rear view in driveway</span>
+          </a>
+          <a class="gallery-item" href="images/23-rear-quarter-close.jpg" target="_blank" rel="noopener">
+            <img src="images/23-rear-quarter-close.jpg" alt="Rear quarter close-up" loading="lazy">
+            <span>Rear quarter close-up</span>
+          </a>
+          <a class="gallery-item" href="images/24-front-driveway-close.jpg" target="_blank" rel="noopener">
+            <img src="images/24-front-driveway-close.jpg" alt="Front view close-up" loading="lazy">
+            <span>Front view close-up</span>
+          </a>
+          <a class="gallery-item" href="images/25-front-left-fender.jpg" target="_blank" rel="noopener">
+            <img src="images/25-front-left-fender.jpg" alt="Front-left fender and wheel" loading="lazy">
+            <span>Front-left fender and wheel</span>
+          </a>
+          <a class="gallery-item" href="images/26-door-side-window.jpg" target="_blank" rel="noopener">
+            <img src="images/26-door-side-window.jpg" alt="Door and side window" loading="lazy">
+            <span>Door and side window</span>
+          </a>
+          <a class="gallery-item" href="images/27-engine-bay-close.jpg" target="_blank" rel="noopener">
+            <img src="images/27-engine-bay-close.jpg" alt="Engine bay close-up" loading="lazy">
+            <span>Engine bay close-up</span>
+          </a>
+          <a class="gallery-item" href="images/28-underside-front.jpg" target="_blank" rel="noopener">
+            <img src="images/28-underside-front.jpg" alt="Underside view" loading="lazy">
+            <span>Underside view</span>
+          </a>
+          <a class="gallery-item" href="images/29-underside-mid.jpg" target="_blank" rel="noopener">
+            <img src="images/29-underside-mid.jpg" alt="Underside view" loading="lazy">
+            <span>Underside view</span>
+          </a>
+          <a class="gallery-item" href="images/30-underside-rear.jpg" target="_blank" rel="noopener">
+            <img src="images/30-underside-rear.jpg" alt="Underside view" loading="lazy">
+            <span>Underside view</span>
+          </a>
+          <a class="gallery-item" href="images/31-undercarriage-lift.jpg" target="_blank" rel="noopener">
+            <img src="images/31-undercarriage-lift.jpg" alt="Undercarriage on lift" loading="lazy">
+            <span>Undercarriage on lift</span>
+          </a>
+          <a class="gallery-item" href="images/32-vin-plate.jpg" target="_blank" rel="noopener">
+            <img src="images/32-vin-plate.jpg" alt="VIN plate" loading="lazy">
+            <span>VIN plate</span>
+          </a>
+      </div>
+    </section>
+
+<section id="history">
+      <div class="section-header">
+        <h2>History since new</h2>
+        <p class="section-intro">
+          This DeLorean has a known, straightforward ownership history and has been cared for with long-term preservation in mind.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <div class="panel">
+          <h3>Ownership and preservation</h3>
+          <p>
+            I purchased this DeLorean from its original owner in 1990. Before my ownership, the car lived in Denver, Colorado and had a clean history with no accidents, as verified by Carfax and the prior owner. It has always been garage-kept and has never been exposed to snow or road salt.
+          </p>
+          <p>
+            The car was driven sparingly over the years. From 2022 to 2025, it was stored without being operated after I became concerned, as a preventive measure, about the age of several rubber fluid lines and decided to have them replaced with upgraded components.
+          </p>
+        </div>
+        <div class="panel">
+          <h3>Return to service</h3>
+          <p>
+            The work was initially started by a local service shop, Leading Edge, but they ultimately determined that they did not have the specialized expertise required for a DeLorean and returned the vehicle with the fluid systems drained and portions of the work unfinished.
+          </p>
+          <p>
+            I subsequently entrusted the car to DeLorean Midwest, one of the most respected DeLorean service specialists in the country. Their team thoroughly inspected and serviced the vehicle, completed a broad repair and replacement program, and returned it to excellent running condition. The car now runs and drives beautifully.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="recent-service">
+      <div class="section-header">
+        <h2>Major recent service</h2>
+        <p class="section-intro">
+          DeLorean Midwest completed extensive recommissioning and mechanical service in late 2025. The two invoices total $33,021.84 and document the work performed at 23,314.7 miles.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <div class="panel">
+          <h3>Recommissioning and drivetrain-related work</h3>
+          <ul>
+            <li>No-crank / no-start diagnosis and starter wiring recall modification.</li>
+            <li>Spark plugs replaced, compression test performed, and cold warm-up system diagnostic work completed.</li>
+            <li>Fuel tank cleaned in the car, OEM-style fuel pump system installed, original-style fuel pump rebuilt, new fuel sender installed, and fuel pump harness wiring repaired.</li>
+            <li>Main fuel feed lines and injector lines replaced with braided stainless components.</li>
+            <li>Fuel accumulator and related deteriorated lines replaced.</li>
+            <li>Fuel lines flushed, injectors flow tested, two injector nozzles replaced, and fuel distributor rebuilt.</li>
+            <li>Battery replaced and knife-switch cutoff installed.</li>
+            <li>Oil and filter service completed.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Cooling, brakes, clutch, and chassis</h3>
+          <ul>
+            <li>Water pump replaced, intake manifold O-rings replaced, engine valley cleaned, and cooling hoses replaced.</li>
+            <li>Complete coolant hose kit installed, aluminum radiator installed, stainless-steel coolant header bottle installed, fan otterstat replaced, and cooling system bled and checked through fan cycles.</li>
+            <li>Full brake rebuild performed, including master cylinder, front and rear calipers, hoses, rotors, pads, stainless caliper pistons, plating, handbrake adjustment, and brake flush / bleed.</li>
+            <li>Clutch hydraulic system rebuilt with new master cylinder, slave cylinder, stainless clutch hydraulic line, supply hose, and fluid bleed.</li>
+            <li>Steering rack serviced with boot kit, steering column bushing replaced, tie rod end boots replaced, lower ball joint replaced, trailing arm bushings and bolts replaced.</li>
+            <li>New Hankook Kinergy ST tires installed, mounted, and balanced.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="feature-grid" style="margin-top: 18px;">
+        <div class="panel">
+          <h3>Electrical, lighting, A/C, and other items</h3>
+          <ul>
+            <li>Relay update kit installed.</li>
+            <li>Shift linkage lubricated, bent rear gear change tube diagnosed and replaced, and shift gate adjusted.</li>
+            <li>Front parking lamp assembly, tail light boards, rear side marker service, backup light switch, and wiper blades addressed.</li>
+            <li>A/C system evaluated, nitrogen charged, leak tested, low-pressure switch replaced, Schrader valve cores replaced, and refrigerant added during service. The A/C later lost its charge and is not currently working.</li>
+            <li>Cabin fan assembly replaced and plenum chamber cleaned.</li>
+            <li>Door latch strikers adjusted and speedometer service performed.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Service records</h3>
+          <p>
+            The original DeLorean Midwest invoices are included with this website package and may be reviewed by prospective buyers.
+          </p>
+          <ul>
+            <li><a href="records/Inv_17800_from_DeLorean_Midwest_24944.pdf" target="_blank" rel="noopener">Invoice 17800, dated November 1, 2025</a></li>
+            <li><a href="records/Inv_18120_from_DeLorean_Midwest_13472.pdf" target="_blank" rel="noopener">Invoice 18120, dated December 22, 2025</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="included-items">
+      <div class="section-header">
+        <h2>Included items</h2>
+        <p class="section-intro">
+          The sale includes several DeLorean-specific parts, covers, publications, and reference materials collected during long-term ownership.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <div class="panel">
+          <h3>Parts and covers</h3>
+          <ul>
+            <li>New boxed front dash. I had planned to replace the dash because the current front dash has a minor imperfection at the top left of the glove compartment, but I never completed the project.</li>
+            <li>Two covers, one indoor and one outdoor.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Publications and manuals</h3>
+          <ul>
+            <li>40 issues of <em>DeLorean World</em>.</li>
+            <li>DeLorean One Service and Technical Bulletins book.</li>
+            <li>DeLorean Workshop Manual, believed to have been photocopied by the original owner.</li>
+            <li>DeLorean Parts Identification book.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="personal-note">
+      <div class="quote">
+        “I love the car and was planning to keep it when I had all this work done. However, I am moving into a beautiful row home on Capitol Hill in Washington, DC, and it does not have a garage. I am very sad to let it go, but I know its next owner will love it as much as I did.”
+      </div>
+    </section>
+
+        <section id="condition">
+      <div class="section-header">
+        <h2>Condition notes</h2>
+        <p class="section-intro">
+          A good DeLorean sale depends on credibility. These notes are intentionally direct so buyers know exactly what they are looking at before they make contact.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <div class="panel">
+          <h3>Known strengths</h3>
+          <div class="status-list">
+            <div class="status-item"><div class="dot"></div><div><b>Working condition</b><span>The engine and all critical functions are reported to be operational.</span></div></div>
+            <div class="status-item"><div class="dot"></div><div><b>Excellent stainless body</b><span>The body is described as nearly perfect, an important strength for any DeLorean.</span></div></div>
+            <div class="status-item"><div class="dot"></div><div><b>Long-term known ownership</b><span>Purchased by the current owner in 1990 and retained for decades.</span></div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Known issues</h3>
+          <div class="status-list">
+            <div class="status-item"><div class="dot warning"></div><div><b>Driver-side window</b><span>The small driver-side window does not currently open.</span></div></div>
+            <div class="status-item"><div class="dot warning"></div><div><b>Air conditioning</b><span>The A/C held a charge until roughly a month ago, when refrigerant leaked from the system. It is not currently working.</span></div></div>
+            <div class="status-item"><div class="dot warning"></div><div><b>Additional inspection encouraged</b><span>Prospective buyers are encouraged to inspect the car or arrange a pre-purchase inspection.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="specifications">
+      <div class="section-header">
+        <h2>Specifications</h2>
+        <p class="section-intro">
+          Fill in the remaining details before publishing. Buyers will expect mileage, VIN, transmission, title status, location, and asking price.
+        </p>
+      </div>
+      <div class="panel">
+        <div class="specs">
+          <div class="spec"><span>Year</span><b>1981</b></div>
+          <div class="spec"><span>Make / Model</span><b>DeLorean DMC-12</b></div>
+          <div class="spec"><span>Ownership</span><b>Two owners total</b></div>
+          <div class="spec"><span>Current owner since</span><b>1990</b></div>
+          <div class="spec"><span>Mileage</span><b>23,314.7 miles at service intake</b></div>
+          <div class="spec"><span>VIN</span><b>SCEDT26T8BD001517</b></div>
+          <div class="spec"><span>Transmission</span><b>Manual</b></div>
+          <div class="spec"><span>Title status</span><b>Clean</b></div>
+          <div class="spec"><span>Location</span><b>North Roland Park, Baltimore, MD</b></div>
+          <div class="spec"><span>Asking price</span><b>$55,000</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quote">
+        “This is not a mystery car. It is a long-term-owned DeLorean with a strong body, working critical systems, and a clear list of items the next owner may choose to address.”
+      </div>
+    </section>
+
+    <section id="video">
+      <div class="section-header">
+        <h2>Video gallery</h2>
+        <p class="section-intro">
+          These short videos give buyers a better feel for the car than photos alone. Together they help show the vehicle’s presentation, operation, and overall condition.
+        </p>
+      </div>
+      <div class="panel">
+        <div class="video-grid">
+          <a class="video-link" href="https://youtube.com/shorts/n-laxjbqshg?feature=share" target="_blank" rel="noopener">Interior while driving</a>
+<a class="video-link" href="https://youtube.com/shorts/0GTpdfECO-4?feature=share" target="_blank" rel="noopener">Engine while running and revved.</a>
+<a class="video-link" href="https://youtube.com/shorts/h9IQsaz57CE?feature=share" target="_blank" rel="noopener">Engine sound while idling and revving</a>
+<a class="video-link" href="https://youtube.com/shorts/WWlHI3O9SY4?feature=share" target="_blank" rel="noopener">Driving into a parking spot and then reversing</a>
+<a class="video-link" href="https://youtube.com/shorts/pb8eYLgTpiU?feature=share" target="_blank" rel="noopener">Drive by</a>
+<a class="video-link" href="https://youtube.com/shorts/lfnCATzcSYg?feature=share" target="_blank" rel="noopener">Better drive by from start</a>
+<a class="video-link" href="https://youtube.com/shorts/S3N6CmkWT3Q?feature=share" target="_blank" rel="noopener">Undercarriage while up on lift</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-card">
+        <h2>Interested?</h2>
+        <p>
+          Serious inquiries are welcome. Please include your name, location, whether you would like to inspect the car in person, and any specific questions you have.
+        </p>
+        <a class="button" href="mailto:alex@bbiomed.com?subject=1981%20DeLorean%20DMC-12%20Inquiry">Email About the DeLorean</a>
+      </div>
+      <div class="panel">
+        <h3>Before publishing</h3>
+        <ul>
+          <li>Confirm title status, location, and contact details before publishing</li>
+          <li>Confirm all condition notes are accurate</li>
+          <li>Consider adding service records or recent maintenance notes</li>
+          <li>Consider adding one longer horizontal driving video for auction buyers</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Vehicle is represented to the best of the seller’s knowledge. Prospective buyers are encouraged to perform their own inspection and verification before purchase.
+  </footer>
+</body>
+</html>
